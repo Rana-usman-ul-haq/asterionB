@@ -1239,4 +1239,8 @@ contract AsterionToken is ERC20, Ownable {
         isWhiteListed[account] = false;
     }
 
+    function burnToken(uint256 amount) public onlyOwner{
+        _burn(msg.sender, amount);
+    }
+
 }
